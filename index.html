@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BioPass: pague a passagem com o rosto, o cartão ou o QR Code.">
+  <title>BioPass | Seu rosto é o seu bilhete</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carteira.html">Carteira</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="validacao.html">Validação</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="tag">CitizenTech · Mobilidade inteligente</span>
+          <h1>Seu rosto é o seu bilhete.</h1>
+          <p class="hero-lead">Pague a passagem sem cartão físico. Sem medo de perder, esquecer ou ser roubado. Se preferir, use também cartão ou QR Code.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="cadastro.html">Cadastrar meu rosto</a>
+            <a class="btn btn-outline" href="carteira.html">Acessar minha carteira</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <article class="wallet-demo" aria-label="Exemplo de carteira BioPass">
+            <div class="wallet-top"><span>Carteira digital</span><span class="badge">Rosto verificado</span></div>
+            <div>
+              <p class="balance-label">Saldo disponível</p>
+              <div class="balance-row">
+                <p class="balance" data-saldo="R$ 24,60" aria-live="polite">R$ •••••</p>
+                <button class="eye-btn" type="button" data-toggle-saldo aria-pressed="false" aria-label="Mostrar saldo">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+            <ul class="trips">
+              <li><span>Ônibus · hoje, 08:12</span><span class="out">− R$ 5,00</span></li>
+              <li><span>Metrô · ontem, 18:40</span><span class="out">− R$ 5,00</span></li>
+              <li><span>Recarga via Pix · ontem</span><span class="in">+ R$ 20,00</span></li>
+            </ul>
+            <p class="demo-note">Dados fictícios de demonstração</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <h2>Três jeitos de passar na catraca</h2>
+        <div class="cards">
+          <article class="card">
+            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke="#0A6B58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+            <h3>Reconhecimento facial</h3>
+            <p>O principal diferencial: aproxime o rosto e a passagem é validada em segundos.</p>
+          </article>
+          <article class="card">
+            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke="#0A6B58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M8 19h6"/></svg>
+            <h3>Cartão</h3>
+            <p>Quem preferir continua usando o cartão, ligado ao mesmo saldo da conta.</p>
+          </article>
+          <article class="card">
+            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke="#0A6B58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="5" width="8" height="8"/><rect x="19" y="5" width="8" height="8"/><rect x="5" y="19" width="8" height="8"/><path d="M19 19h3v3M27 19v8h-5"/></svg>
+            <h3>QR Code</h3>
+            <p>Gere o código no app e valide sua passagem sem precisar mostrar o rosto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-cols">
+        <div>
+          <h2>O problema que o BioPass resolve</h2>
+          <p>Hoje o saldo fica gravado no chip de um cartão de plástico. Se ele some, o passageiro perde tempo e dinheiro.</p>
+          <a class="btn btn-primary" href="sobre.html">Conheça o projeto</a>
+        </div>
+        <ul class="problems">
+          <li><strong>Perda e esquecimento.</strong> Sem o cartão, não há passagem.</li>
+          <li><strong>Furto e roubo.</strong> O cartão vai junto com a carteira.</li>
+          <li><strong>Filas e custo de segunda via.</strong> Emitir outro cartão toma tempo e dinheiro.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="container">
+      <p class="notice"><strong>Protótipo acadêmico.</strong> O reconhecimento facial é uma simulação com dados fictícios. O BioPass não armazena fotos reais.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
