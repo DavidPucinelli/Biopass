@@ -90,3 +90,148 @@ a:hover{color:var(--brand-dark)}
   .balance{font-size:2.4rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* cadastro e carteira */
+:root{
+  --ink:#0B1F33; --ink-soft:#33475B; --bg:#F5F8FA; --white:#FFFFFF;
+  --brand:#0A6B58; --brand-dark:#064A3D; --mint:#5CE0C3; --mint-bg:#D9F5EE;
+  --amber:#F2B134; --line:#DCE5EC; --muted:#B8C7D6;
+  --font-title:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif;
+  --radius:16px; --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.5}
+h1,h2,h3{font-family:var(--font-title);margin:0;line-height:1.1}
+p{margin:0}
+img,svg{max-width:100%}
+a{color:var(--brand)}
+a:hover{color:var(--brand-dark)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* Botões */
+.btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--brand);color:var(--white)}
+.btn-primary:hover{background:var(--brand-dark);color:var(--white)}
+.btn-outline{background:var(--white);color:var(--ink);border-color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--white)}
+.btn-accent{background:var(--amber);color:var(--ink)}
+.btn-accent:hover{background:#FFC555;color:var(--ink)}
+
+/* Cabeçalho e menu */
+.site-header{background:var(--ink);color:var(--white);position:sticky;top:0;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-family:var(--font-title);font-weight:700;font-size:1.5rem}
+.brand:hover{color:var(--mint)}
+.nav-toggle{display:none;background:none;border:2px solid var(--muted);border-radius:8px;color:var(--white);padding:8px 10px;cursor:pointer}
+.nav-list{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav-list a{color:var(--white);text-decoration:none;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.nav-list a:hover,.nav-list a[aria-current="page"]{color:var(--mint);border-bottom-color:var(--mint)}
+
+/* Hero */
+.hero{padding:72px 0}
+.hero-inner{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-text{flex:1 1 420px;display:flex;flex-direction:column;gap:24px}
+.tag{align-self:flex-start;background:var(--mint-bg);color:var(--brand-dark);font-weight:600;font-size:.9rem;padding:6px 14px;border-radius:999px}
+.hero h1{font-size:clamp(2.4rem,6vw,3.5rem)}
+.hero-lead{font-size:1.25rem;color:var(--ink-soft);max-width:540px}
+.actions{display:flex;flex-wrap:wrap;gap:16px}
+
+/* Cartão de demonstração */
+.hero-visual{flex:1 1 380px;display:flex;justify-content:center}
+.wallet-demo{width:100%;max-width:440px;background:var(--ink);color:var(--white);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.wallet-top{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted)}
+.badge{background:#123B4A;color:var(--mint);padding:4px 12px;border-radius:999px;font-weight:600}
+.balance-label{font-size:.9rem;color:var(--muted)}
+.balance-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.balance{font-family:var(--font-title);font-size:3rem;font-weight:700}
+.eye-btn{background:none;border:2px solid var(--muted);border-radius:50%;width:44px;height:44px;display:grid;place-items:center;color:var(--white);cursor:pointer}
+.eye-btn:hover{border-color:var(--mint);color:var(--mint)}
+.trips{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid #2A3F55;display:flex;flex-direction:column;gap:12px;font-size:.95rem}
+.trips li{display:flex;justify-content:space-between}
+.trips .out{color:var(--muted)}
+.trips .in{color:var(--mint)}
+.demo-note{font-size:.8rem;color:var(--muted)}
+
+/* Seções */
+.section{padding:64px 0}
+.section-white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section h2{font-size:clamp(1.8rem,4vw,2.25rem);margin-bottom:32px}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 280px;background:var(--bg);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:1.4rem}
+.card p{color:var(--ink-soft)}
+.two-cols{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.two-cols>*{flex:1 1 360px}
+.two-cols p{font-size:1.15rem;color:var(--ink-soft);margin-bottom:16px}
+.problems{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.problems li{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px}
+.notice{background:#FFF3D6;color:#4A3500;border-radius:12px;padding:20px 24px;margin-bottom:64px}
+
+/* Rodapé */
+.site-footer{background:var(--ink);color:var(--muted)}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:32px;padding-bottom:32px;font-size:.95rem}
+
+/* Responsivo */
+@media (max-width:768px){
+  .nav-toggle{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ink);border-top:1px solid #2A3F55;padding:8px 24px 20px}
+  .nav.is-open{display:block}
+  .nav-list{flex-direction:column;gap:0}
+  .nav-list a{display:block;padding:14px 0;border-bottom:1px solid #2A3F55}
+  .hero{padding:40px 0}
+  .balance{font-size:2.4rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ===== Passo 4: formulários, cadastro, carteira e modais ===== */
+[hidden]{display:none!important}
+.page-hero{padding:48px 0 24px}
+.page-hero h1{font-size:clamp(2rem,5vw,2.75rem);margin-bottom:12px}
+.page-hero p{color:var(--ink-soft);font-size:1.15rem;max-width:620px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px;margin-bottom:64px;max-width:720px}
+.panel h2{font-size:1.6rem;margin-bottom:20px}
+.form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:flex;flex-wrap:wrap;gap:16px}
+.form-row .field{flex:1 1 240px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.radio-group legend{font-weight:600}
+.hint{font-size:.9rem;color:var(--ink-soft)}
+.input{font:inherit;padding:12px 14px;border:2px solid #6B7F92;border-radius:8px;background:var(--white);color:var(--ink);width:100%}
+.input:focus-visible{border-color:var(--brand)}
+.input[aria-invalid="true"]{border-color:#B3261E}
+.erro{color:#B3261E;font-size:.9rem;min-height:1.3em}
+.steps{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0 0 24px}
+.steps li{padding:6px 14px;border-radius:999px;background:var(--line);color:var(--ink-soft);font-weight:600;font-size:.9rem}
+.steps li.ativo{background:var(--brand);color:var(--white)}
+.face-box{background:var(--ink);border-radius:var(--radius);display:grid;place-items:center;padding:24px;margin-bottom:16px}
+.progress{height:12px;background:var(--line);border-radius:999px;overflow:hidden;margin-bottom:12px}
+.progress-bar{height:100%;width:0;background:var(--brand)}
+.status{font-weight:600;min-height:1.6em;margin-bottom:12px}
+.status-ok{color:var(--brand-dark)}
+.status-erro{color:#B3261E}
+
+/* Carteira */
+.locked{text-align:center;margin:0 auto 64px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.wallet-page{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;margin-bottom:64px}
+.wallet-page .wallet-demo{flex:1 1 360px;max-width:none}
+.wallet-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn-ghost{background:transparent;color:var(--white);border-color:var(--muted)}
+.btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+.history{flex:1 1 360px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.history h2{font-size:1.5rem}
+.tx-list{list-style:none;margin:16px 0;padding:0}
+.tx-list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.tx-data{display:block;font-size:.85rem;color:var(--ink-soft)}
+.tx-in{color:var(--brand-dark);font-weight:600}
+.tx-out{font-weight:600}
+
+/* Modais (elemento <dialog>) */
+.modal{border:0;border-radius:20px;padding:0;width:calc(100% - 32px);max-width:480px;color:var(--ink)}
+.modal::backdrop{background:rgba(11,31,51,.75)}
+.modal-body{padding:28px;display:flex;flex-direction:column;gap:16px}
+.modal-body h2{font-size:1.5rem}
+.radio-group{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.radio-group label{display:flex;gap:10px;align-items:center;padding:12px 14px;border:2px solid var(--line);border-radius:8px;font-weight:500;cursor:pointer}
+.radio-group label:has(input:checked){border-color:var(--brand);background:var(--mint-bg)}
+.modal-actions{display:flex;flex-wrap:wrap;gap:12px}
