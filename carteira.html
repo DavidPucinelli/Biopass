@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulte seu saldo, adicione crédito e veja o extrato da sua conta BioPass.">
+  <title>Minha carteira | BioPass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/carteira.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carteira.html" aria-current="page">Carteira</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="validacao.html">Validação</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Minha carteira</h1>
+        <p>Consulte seu saldo, adicione crédito e veja suas viagens.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="panel locked" id="area-login" aria-labelledby="titulo-bloqueado">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A6B58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        <h2 id="titulo-bloqueado">Entre para ver sua carteira</h2>
+        <p class="hint">Seu saldo e suas viagens ficam protegidos até você entrar.</p>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btn-entrar">Entrar</button>
+          <a class="btn btn-outline" href="cadastro.html">Criar conta</a>
+        </div>
+      </section>
+
+      <div class="wallet-page" id="area-carteira" hidden>
+        <article class="wallet-demo" aria-label="Sua carteira BioPass">
+          <div class="wallet-top"><span>Olá, <strong id="nome-usuario"></strong></span><span class="badge">Rosto verificado</span></div>
+          <div>
+            <p class="balance-label">Saldo disponível</p>
+            <div class="balance-row">
+              <p class="balance" id="saldo-valor" aria-live="polite">R$ •••••</p>
+              <button class="eye-btn" type="button" id="btn-olho" aria-pressed="false" aria-label="Mostrar saldo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="wallet-actions">
+            <button class="btn btn-accent" type="button" id="btn-adicionar">Adicionar saldo</button>
+            <button class="btn btn-ghost" type="button" id="btn-sair">Sair</button>
+          </div>
+          <p class="demo-note">Dados fictícios de demonstração</p>
+        </article>
+
+        <section class="history" aria-labelledby="titulo-historico">
+          <h2 id="titulo-historico">Últimas transações</h2>
+          <ul class="tx-list" id="lista-transacoes"></ul>
+          <button class="btn btn-outline" type="button" id="btn-extrato" aria-expanded="false">Ver extrato completo</button>
+        </section>
+      </div>
+    </div>
+
+    <dialog class="modal" id="modal-login" aria-labelledby="titulo-login">
+      <form class="modal-body" id="form-login" novalidate>
+        <h2 id="titulo-login">Entrar no BioPass</h2>
+        <div class="field">
+          <label for="login-email">E-mail</label>
+          <input class="input" id="login-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="login-senha">Senha</label>
+          <input class="input" id="login-senha" name="senha" type="password" autocomplete="current-password" required>
+        </div>
+        <p class="erro" id="erro-login" role="alert"></p>
+        <p class="hint">Conta de teste: demo@biopass.com · senha biopass123</p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" type="submit">Entrar</button>
+          <button class="btn btn-outline" type="button" data-fechar>Cancelar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="modal-recarga" aria-labelledby="titulo-recarga">
+      <div class="modal-body">
+        <h2 id="titulo-recarga">Adicionar saldo</h2>
+
+        <section id="etapa-facial">
+          <p>Primeiro, confirme que é você com a validação facial.</p>
+          <div class="face-box"><svg width="200" height="220" viewBox="0 0 240 260" fill="none" role="img" aria-label="Enquadramento do rosto"><g stroke="#4DF0C8" stroke-width="4" stroke-linecap="round"><path d="M20 70V36a16 16 0 0 1 16-16h34M170 20h34a16 16 0 0 1 16 16v34M220 190v34a16 16 0 0 1-16 16h-34M70 240H36a16 16 0 0 1-16-16v-34"/></g><g stroke="#B8C7D6" stroke-width="3" stroke-linecap="round"><ellipse cx="120" cy="115" rx="44" ry="54"/><path d="M52 218c8-34 36-52 68-52s60 18 68 52"/></g></svg></div>
+          <div class="progress" aria-hidden="true"><div class="progress-bar" id="barra-facial"></div></div>
+          <p class="status" id="status-facial" role="status"></p>
+          <div class="modal-actions">
+            <button class="btn btn-primary" type="button" id="btn-validar-rosto">Validar meu rosto</button>
+            <button class="btn btn-outline" type="button" data-fechar>Cancelar</button>
+          </div>
+        </section>
+
+        <section id="etapa-pagamento" hidden>
+          <form class="form" id="form-pagamento" novalidate>
+            <div class="field">
+              <label for="valor">Valor da recarga (R$)</label>
+              <input class="input" id="valor" name="valor" type="number" min="5" max="1000" step="0.01" inputmode="decimal" required>
+            </div>
+            <fieldset class="radio-group">
+              <legend>Forma de pagamento</legend>
+              <label><input type="radio" name="forma" value="Pix"> Pix</label>
+              <label><input type="radio" name="forma" value="Crédito"> Cartão de crédito</label>
+              <label><input type="radio" name="forma" value="Débito"> Cartão de débito</label>
+            </fieldset>
+            <p class="erro" id="erro-pagamento" role="alert"></p>
+            <div class="modal-actions">
+              <button class="btn btn-primary" type="submit">Pagar</button>
+              <button class="btn btn-outline" type="button" data-fechar>Cancelar</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="etapa-resultado" hidden>
+          <p class="status" id="msg-resultado" role="status"></p>
+          <button class="btn btn-primary" type="button" data-fechar>Fechar</button>
+        </section>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
