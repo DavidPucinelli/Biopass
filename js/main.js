@@ -1,4 +1,4 @@
-* BioPass — interações globais */
+/* BioPass — interações globais */
 document.addEventListener('DOMContentLoaded', () => {
   iniciarMenu();
   iniciarSaldoDemo();
