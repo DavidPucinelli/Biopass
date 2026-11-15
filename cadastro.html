@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crie sua conta BioPass e cadastre seu rosto para pagar a passagem.">
+  <title>Cadastro | BioPass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/cadastro.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carteira.html">Carteira</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+          <li><a href="validacao.html">Validação</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Crie sua conta BioPass</h1>
+        <p>Preencha seus dados e cadastre seu rosto. Este é um protótipo: use apenas dados fictícios.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <ol class="steps" aria-label="Etapas do cadastro">
+        <li id="passo-1" class="ativo">1. Seus dados</li>
+        <li id="passo-2">2. Cadastro facial</li>
+      </ol>
+
+      <section class="panel" id="etapa-dados" aria-labelledby="titulo-dados">
+        <h2 id="titulo-dados">Seus dados</h2>
+        <form id="form-cadastro" class="form" novalidate>
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input class="input" id="nome" name="nome" type="text" autocomplete="name" aria-describedby="erro-nome" required>
+            <p class="erro" id="erro-nome" role="alert"></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cpf">CPF</label>
+              <input class="input" id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" aria-describedby="dica-cpf erro-cpf" required>
+              <p class="hint" id="dica-cpf">Para testar, use 529.982.247-25.</p>
+              <p class="erro" id="erro-cpf" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="nascimento">Data de nascimento</label>
+              <input class="input" id="nascimento" name="nascimento" type="date" autocomplete="bday" aria-describedby="erro-nascimento" required>
+              <p class="erro" id="erro-nascimento" role="alert"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" aria-describedby="erro-email" required>
+            <p class="erro" id="erro-email" role="alert"></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="senha">Senha</label>
+              <input class="input" id="senha" name="senha" type="password" autocomplete="new-password" aria-describedby="dica-senha erro-senha" required>
+              <p class="hint" id="dica-senha">Mínimo de 6 caracteres.</p>
+              <p class="erro" id="erro-senha" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="bilhete">Número do Bilhete Único</label>
+              <input class="input" id="bilhete" name="bilhete" type="text" inputmode="numeric" aria-describedby="dica-bilhete erro-bilhete" required>
+              <p class="hint" id="dica-bilhete">Somente números, de 8 a 12 dígitos.</p>
+              <p class="erro" id="erro-bilhete" role="alert"></p>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Continuar para o cadastro facial</button>
+        </form>
+      </section>
+
+      <section class="panel" id="etapa-facial" aria-labelledby="titulo-facial" hidden>
+        <h2 id="titulo-facial">Cadastro facial</h2>
+        <div class="face-box"><svg width="200" height="220" viewBox="0 0 240 260" fill="none" role="img" aria-label="Enquadramento do rosto"><g stroke="#4DF0C8" stroke-width="4" stroke-linecap="round"><path d="M20 70V36a16 16 0 0 1 16-16h34M170 20h34a16 16 0 0 1 16 16v34M220 190v34a16 16 0 0 1-16 16h-34M70 240H36a16 16 0 0 1-16-16v-34"/></g><g stroke="#B8C7D6" stroke-width="3" stroke-linecap="round"><ellipse cx="120" cy="115" rx="44" ry="54"/><path d="M52 218c8-34 36-52 68-52s60 18 68 52"/></g></svg></div>
+        <div class="progress" aria-hidden="true"><div class="progress-bar" id="barra-facial"></div></div>
+        <p class="status" id="status-facial" role="status"></p>
+        <p class="hint">Simulação: nenhuma imagem é capturada ou armazenada.</p>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btn-capturar">Iniciar captura simulada</button>
+          <a class="btn btn-accent" id="link-carteira" href="carteira.html" hidden>Ir para minha carteira</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
