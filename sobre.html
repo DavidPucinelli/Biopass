@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça o BioPass, a carteira digital de transporte que usa o rosto como bilhete.">
+  <title>Sobre | BioPass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+          <li><a href="carteira.html">Carteira</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="validacao.html">Validação</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Sobre o BioPass</h1>
+        <p>Uma carteira digital de transporte em que o rosto, o cartão ou o QR Code viram o seu bilhete.</p>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container two-cols">
+        <div>
+          <h2>A ideia</h2>
+          <p>Quem anda de transporte público depende de um cartão de plástico. Se ele é perdido, esquecido ou roubado, o passageiro perde tempo e saldo.</p>
+          <p>O BioPass separa o saldo do objeto: ele fica na conta da pessoa, e a catraca reconhece quem está passando.</p>
+        </div>
+        <ul class="problems">
+          <li><strong>Sem cartão físico.</strong> O rosto identifica o passageiro na catraca.</li>
+          <li><strong>Sem depender de um só método.</strong> Cartão e QR Code continuam disponíveis.</li>
+          <li><strong>Saldo protegido.</strong> Ele só aparece depois do login e fica oculto até você pedir.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Como funciona</h2>
+        <ol class="process">
+          <li><h3>Cadastro</h3><p>A pessoa informa seus dados e o número do Bilhete Único, e cadastra o rosto.</p></li>
+          <li><h3>Carteira</h3><p>Depois do login, ela adiciona saldo por Pix, crédito ou débito, confirmando o rosto antes.</p></li>
+          <li><h3>Catraca</h3><p>Na hora de embarcar, basta usar o rosto, o cartão ou o QR Code.</p></li>
+          <li><h3>Extrato</h3><p>Cada recarga e cada viagem fica registrada no extrato da conta.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <h2>O que compõe o projeto</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Site</h3>
+            <p>Interface feita com HTML, CSS e JavaScript puros, responsiva e com dados simulados.</p>
+          </article>
+          <article class="card">
+            <h3>Assistente virtual</h3>
+            <p>Chatbot com IA que tira dúvidas do passageiro, disponível no Webchat e no Telegram.</p>
+          </article>
+          <article class="card">
+            <h3>Privacidade</h3>
+            <p>A LGPD trata dados biométricos como dados sensíveis. Por isso, neste protótipo nenhuma imagem do rosto é capturada ou guardada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="notice"><strong>Protótipo acadêmico.</strong> Todo o reconhecimento facial e todos os pagamentos são simulações com dados fictícios.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="cadastro.html">Criar minha conta</a>
+          <a class="btn btn-outline" href="validacao.html">Ver a catraca funcionando</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
