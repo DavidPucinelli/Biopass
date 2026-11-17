@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simule a passagem na catraca com rosto, cartão ou QR Code.">
+  <title>Validação | BioPass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/validacao.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carteira.html">Carteira</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="validacao.html" aria-current="page">Validação</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Catraca simulada</h1>
+        <p>Veja como seria passar na catraca com o BioPass. A viagem é debitada da sua carteira.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="panel locked" id="aviso-login" aria-labelledby="titulo-aviso">
+        <h2 id="titulo-aviso">Entre para usar a catraca</h2>
+        <p class="hint">A catraca desconta a tarifa do saldo da sua carteira, então você precisa estar logado.</p>
+        <a class="btn btn-primary" href="carteira.html">Ir para a carteira</a>
+      </section>
+
+      <div class="validacao-layout" id="painel-catraca" hidden>
+        <section class="panel" aria-labelledby="titulo-simular">
+          <h2 id="titulo-simular">Simular passagem</h2>
+          <form id="form-catraca" class="form">
+            <div class="field">
+              <label for="veiculo">Veículo</label>
+              <select class="input" id="veiculo" name="veiculo">
+                <option>Ônibus</option>
+                <option>Metrô</option>
+                <option>Trem</option>
+              </select>
+            </div>
+            <fieldset class="radio-group">
+              <legend>Como você vai pagar?</legend>
+              <label><input type="radio" name="metodo" value="Rosto" checked> Reconhecimento facial</label>
+              <label><input type="radio" name="metodo" value="Cartão"> Cartão</label>
+              <label><input type="radio" name="metodo" value="QR Code"> QR Code</label>
+            </fieldset>
+            <label class="check"><input type="checkbox" id="nao-reconhecido"> Simular rosto não reconhecido</label>
+            <p class="hint">Tarifa fictícia de R$ 5,00 por viagem.</p>
+            <button class="btn btn-primary" type="submit" id="btn-passar">Aproximar da catraca</button>
+          </form>
+        </section>
+
+        <div class="gate" role="status" aria-live="polite" aria-label="Painel da catraca">
+          <div class="gate-light" id="catraca-luz"></div>
+          <p class="gate-title" id="catraca-titulo">Aguardando passageiro</p>
+          <p class="gate-detail" id="catraca-detalhe">Escolha como pagar e aproxime-se.</p>
+          <div class="progress" aria-hidden="true"><div class="progress-bar" id="catraca-barra"></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
