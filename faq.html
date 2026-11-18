@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Perguntas frequentes sobre o BioPass: cadastro, reconhecimento facial, saldo e privacidade.">
+  <title>FAQ | BioPass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#5CE0C3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 11V7a1 1 0 0 1 1-1h4M21 6h4a1 1 0 0 1 1 1v4M26 21v4a1 1 0 0 1-1 1h-4M11 26H7a1 1 0 0 1-1-1v-4"/><circle cx="16" cy="14" r="4"/><path d="M9 24c1-4 4-6 7-6s6 2 7 6"/></svg>
+        BioPass
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carteira.html">Carteira</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="validacao.html">Validação</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Perguntas frequentes</h1>
+        <p>Tire suas dúvidas sobre cadastro, reconhecimento facial, saldo e privacidade.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Conta e cadastro</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>O que é o BioPass?</summary>
+            <p>É uma carteira digital de transporte. O saldo fica na sua conta, e você passa na catraca usando o rosto, o cartão ou um QR Code.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como faço meu cadastro?</summary>
+            <p>Na página <a href="cadastro.html">Cadastro</a>, informe nome, CPF, e-mail, senha, data de nascimento e o número do seu Bilhete Único. Depois disso, é só cadastrar o rosto.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Preciso ter um Bilhete Único?</summary>
+            <p>Sim. O número do Bilhete Único, de 8 a 12 dígitos, liga a sua conta BioPass ao sistema de transporte.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <h2>Saldo e recarga</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Como adiciono saldo?</summary>
+            <p>Entre na <a href="carteira.html">Carteira</a>, clique em adicionar saldo, confirme o seu rosto e escolha Pix, crédito ou débito.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Existe valor mínimo ou máximo de recarga?</summary>
+            <p>Neste protótipo, a recarga vai de R$ 5,00 a R$ 1.000,00. O banco simulado recusa pagamentos acima de R$ 300,00 para demonstrar uma recusa.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Por que o saldo aparece escondido?</summary>
+            <p>Por segurança, como nos apps de banco. O saldo só aparece depois do login e quando você clica no ícone do olho.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Onde vejo minhas viagens e recargas?</summary>
+            <p>No extrato da Carteira. Cada recarga e cada viagem fica registrada com data e hora.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Catraca e privacidade</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>E se eu não quiser usar o rosto?</summary>
+            <p>Sem problema. O cartão e o QR Code continuam funcionando com o mesmo saldo da conta.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Perdi meu cartão. Perco o saldo?</summary>
+            <p>Não. O saldo fica guardado na sua conta, e não no cartão. Você continua passando pela catraca com o rosto ou o QR Code.</p>
+          </details>
+          <details class="faq-item">
+            <summary>O BioPass guarda foto do meu rosto?</summary>
+            <p>Não. A LGPD trata dados biométricos como dados sensíveis. Neste protótipo, o reconhecimento facial é simulado e nenhuma imagem é capturada ou armazenada.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Os pagamentos são reais?</summary>
+            <p>Não. Este é um protótipo acadêmico, e todos os pagamentos e dados são fictícios.</p>
+          </details>
+        </div>
+
+        <div class="faq-cta">
+          <p>Não encontrou sua resposta?</p>
+          <a class="btn btn-primary" href="contato.html">Fale com a gente</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>BioPass · Global Solution 2026/2 · CitizenTech · FIAP</span>
+      <span>1TDSPB</span>
+    </div>
+  </footer>
+</body>
+</html>
