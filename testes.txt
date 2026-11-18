@@ -4,12 +4,12 @@ Responsável: [Luiz Felipe Marques Gomes] - RM [576768]
 Obs.: o BioPass é um protótipo de demonstração.
 Os pagamentos e o reconhecimento facial são simulados.
 
-[ ] Menu abre todas as páginas
-[ ] Menu funciona no celular
-[ ] Cadastro mostra erro com dados inválidos
-[ ] Cadastro simulado funciona com dados corretos
-[ ] Login de demonstração funciona
-[ ] Botão do olho mostra e esconde o saldo
-[ ] Recarga simulada funciona
-[ ] Formulário de contato mostra a mensagem de envio
-[ ] Perguntas do FAQ abrem e fecham
+[OK] Menu abre todas as páginas
+[OK] Menu funciona no celular
+[OK] Cadastro mostra erro com dados inválidos
+[OK] Cadastro simulado funciona com dados corretos
+[OK] Login de demonstração funciona
+[OK] Botão do olho mostra e esconde o saldo
+[OK] Recarga simulada funciona
+[OK] Formulário de contato mostra a mensagem de envio
+[OK] Perguntas do FAQ abrem e fecham
