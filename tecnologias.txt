@@ -3,3 +3,8 @@ Responsável: Marcos Paulo - RM 575557
 
 Obs.: o BioPass é um protótipo de demonstração.
 Não é um site real e usa apenas dados fictícios.
+
+- HTML5
+- CSS3 (flexbox e media queries)
+- JavaScript puro
+- localStorage para simular o banco de dados
