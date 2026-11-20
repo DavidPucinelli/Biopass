@@ -99,10 +99,7 @@ Testado em 390 px (celular), 768 px (tablet) e 1440 px (desktop).
 ![Carteira](assets/img/carteira.png)
 ![Catraca simulada](assets/img/validacao.png)
 
-## Uso de Inteligência Artificial
-
-Utilizamos o **Claude (Anthropic)** como apoio no desenvolvimento do front-end: na estrutura do código HTML, CSS e JavaScript, na camada de dados simulada, nas validações dos formulários e em explicações do código. Todo o código foi revisado, testado e executado pelos integrantes do grupo.
 
 ## Contato
 
-[E-MAIL_OU_CANAL_DE_CONTATO_DO_GRUPO]
+davidpucinelli19@gmail.com
