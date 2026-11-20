@@ -4,7 +4,7 @@
 
 Projeto da **Global Solution 2026/2 — FIAP** (tema CitizenTech), disciplina Front-End Design Engineering.
 
-**Repositório:** [COLE_AQUI_O_LINK_DO_REPOSITORIO]
+**Repositório:** https://github.com/DavidPucinelli/Biopass.git
 
 > Protótipo acadêmico. O reconhecimento facial e os pagamentos são **simulações** com dados fictícios. Nenhuma foto é capturada ou armazenada.
 
