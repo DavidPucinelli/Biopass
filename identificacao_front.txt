@@ -1,0 +1,15 @@
+GLOBAL SOLUTION 2026/2 - FIAP - TURMA 1TDSPB
+Projeto: BioPass (CitizenTech)
+Disciplina: Front-End Design Engineering
+
+INTEGRANTES
+Marcos Paulo da Silva| RM 575557  
+David Pucinelli da Silva| 576788  
+Enzo Fukimoto | RM 575754 
+Luiz Felipe Marques Gomes| RM 576768 
+
+REPOSITORIO (GitHub, publico): https://github.com/DavidPucinelli/Biopass
+COMO TESTAR
+Abra o index.html no navegador (ou use o Live Server do VS Code).
+Conta de teste (dados ficticios): demo@biopass.com / senha biopass123
+CPF valido para o cadastro: 529.982.247-25
